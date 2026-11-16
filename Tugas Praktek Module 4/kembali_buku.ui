@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KembaliBukuWindow</class>
+ <widget class="QMainWindow" name="KembaliBukuWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Perpustakaan - Form Pengembalian Buku - kembali_buku.ui</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow { background-color: #F8F9FA; }
+QLabel#lblTitle { font-size: 18px; font-weight: bold; color: #2C3E50; }
+QLabel { font-size: 12px; color: #333; }
+QLineEdit, QDateEdit { padding: 6px; border: 1px solid #BDC3C7; border-radius: 4px; background-color: white; }
+QLineEdit:focus, QDateEdit:focus { border: 1px solid #3498DB; }
+QPushButton { background-color: #34495E; color: white; border: none; border-radius: 4px; padding: 8px 15px; font-weight: bold; }
+QPushButton:hover { background-color: #415B76; }
+QPushButton#btnKembaliProses { background-color: #27AE60; }
+QPushButton#btnKembaliProses:hover { background-color: #2ECC71; }
+QTableWidget { background-color: white; border: 1px solid #BDC3C7; gridline-color: #ECF0F1; }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayoutMain">
+    <item>
+     <widget class="QLabel" name="lblTitle">
+      <property name="text">
+       <string>📥 FORM PENGEMBALIAN BUKU</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayoutMain">
+      <item>
+       <widget class="QFrame" name="frameInput">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayoutForm">
+         <item>
+          <layout class="QFormLayout" name="formLayoutInputs">
+           <item row="0" column="0">
+            <widget class="QLabel" name="lblIdPinjam">
+             <property name="text">
+              <string>ID Pinjam:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="txtIdPinjam">
+             <property name="placeholderText">
+              <string>Pilih dari tabel / isi ID</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="lblTanggalKembali">
+             <property name="text">
+              <string>Tanggal Kembali:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QDateEdit" name="dateKembali">
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="lblDenda">
+             <property name="text">
+              <string>Denda (Rp):</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="txtDenda">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_Form">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayoutButtons">
+           <item>
+            <widget class="QPushButton" name="btnKembaliProses">
+             <property name="text">
+              <string>Kembalikan Buku</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnBersihkan">
+             <property name="text">
+              <string>Bersihkan</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayoutTable">
+        <item>
+         <widget class="QLabel" name="lblTableTitle">
+          <property name="text">
+           <string>📋 Daftar Transaksi Peminjaman Aktif</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableAktif">
+          <column>
+           <property name="text">
+            <string>ID Pinjam</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nama Peminjam</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ID Buku</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Judul Buku</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Tanggal Pinjam</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Durasi</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Status</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnKembali">
+      <property name="text">
+       <string>🔚 Kembali ke Menu Utama</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

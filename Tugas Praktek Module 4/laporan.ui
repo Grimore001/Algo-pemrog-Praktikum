@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LaporanWindow</class>
+ <widget class="QMainWindow" name="LaporanWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Perpustakaan - Laporan Statistik - laporan.ui</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow { background-color: #F8F9FA; }
+QLabel#lblTitle { font-size: 18px; font-weight: bold; color: #2C3E50; }
+QLabel { font-size: 13px; color: #333; }
+QFrame#frameStats { background-color: white; border: 1px solid #BDC3C7; border-radius: 6px; }
+QPushButton { background-color: #34495E; color: white; border: none; border-radius: 4px; padding: 8px 15px; font-weight: bold; }
+QPushButton:hover { background-color: #415B76; }
+QPushButton#btnRefresh { background-color: #2980B9; }
+QPushButton#btnRefresh:hover { background-color: #3498DB; }
+QTableWidget { background-color: white; border: 1px solid #BDC3C7; gridline-color: #ECF0F1; }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayoutMain">
+    <item>
+     <widget class="QLabel" name="lblTitle">
+      <property name="text">
+       <string>📊 LAPORAN &amp; STATISTIK PERPUSTAKAAN</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frameStats">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayoutStats">
+       <item>
+        <widget class="QLabel" name="lblTotalBuku">
+         <property name="text">
+          <string>Total Buku: 0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblActiveLoans">
+         <property name="text">
+          <string>Buku Dipinjam: 0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblTotalDenda">
+         <property name="text">
+          <string>Total Denda: Rp 0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lblTableTitle">
+      <property name="styleSheet">
+       <string notr="true">font-weight: bold; margin-top: 10px;</string>
+      </property>
+      <property name="text">
+       <string>🔥 Buku Paling Sering Dipinjam</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tablePopuler">
+      <property name="maximumSize">
+       <size>
+        <width>800</width>
+        <height>800</height>
+       </size>
+      </property>
+      <column>
+       <property name="text">
+        <string>ID Buku</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Judul Buku</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Pengarang</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Jumlah Dipinjam</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayoutButtons">
+      <item>
+       <widget class="QPushButton" name="btnRefresh">
+        <property name="text">
+         <string>🔄 Refresh Laporan</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnKembali">
+      <property name="text">
+       <string>🔚 Kembali ke Menu Utama</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
